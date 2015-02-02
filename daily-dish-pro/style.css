@@ -1781,6 +1781,14 @@ padding: 2em 0;
     max-width: 1280px;
 }
 
+.content {
+    width: 66%;
+}
+
+.sidebar-primary {
+    width: 30%;
+}
+
 /*
 .site-title a {
 	background: url("http://www.invibed.com/wp-content/uploads/2015/01/logo.png") no-repeat !important;
@@ -1798,9 +1806,9 @@ Media Queries
 	.after-footer,
 	.before-header,
 	.site-container {
-		padding-left: 40px;
-		padding-right: 40px;
-		width: 960px;
+		/*padding-left: 40px;*/
+		/*padding-right: 40px;*/
+		/*width: 960px;*/
 	}
 
 	.home-middle .featured-content .entry {
@@ -1851,7 +1859,7 @@ Media Queries
 	.after-footer,
 	.before-header,
 	.site-container {
-		width: 768px;
+		/*width: 768px;*/
 	}
 
 	.content,
