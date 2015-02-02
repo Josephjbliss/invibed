@@ -1772,11 +1772,23 @@ max-width: none;
 padding: 2em 0;
 }
 
+.site-container {
+    background-color: #FFF;
+    box-shadow: none;
+    margin: 40px auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1280px;
+}
+
 /*
 .site-title a {
 	background: url("http://www.invibed.com/wp-content/uploads/2015/01/logo.png") no-repeat !important;
 }
 */
+
+
+
 /*
 Media Queries
 ---------------------------------------------------------------------------------------------------- */
