@@ -21,4 +21,24 @@ jQuery(function( $ ){
 		});
 	});
 
+	//Stick Nav
+	stickyNavTop = $('.nav-primary').offset().top;  
+
+	var stickyNav = function(){  
+	var scrollTop = $(window).scrollTop();  
+   
+	if (scrollTop > stickyNavTop) {   
+		$('.nav-primary').addClass('sticky');
+	} 
+	else {  
+		$('.nav-primary').removeClass('sticky');   
+	}  
+	};
+
+	stickyNav();  
+
+	$(window).scroll(function() {  
+		stickyNav();  
+	});  
+
 });
