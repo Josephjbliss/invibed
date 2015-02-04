@@ -18,6 +18,7 @@ add_action( 'wp_enqueue_scripts', 'daily_dish_enqueue_scripts_styles' );
 function daily_dish_enqueue_scripts_styles() {
 
 	wp_enqueue_script( 'daily-dish-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'invibed-signup', get_bloginfo( 'stylesheet_directory' ) . '/js/signup.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'daily-dish-google-fonts', '//fonts.googleapis.com/css?family=Alice|Lato:400,700,900', array(), CHILD_THEME_VERSION );

@@ -1792,7 +1792,7 @@ padding: 2em 0;
 main article.post, aside section.widget {
 	margin: 0 1%;
 	width: 98%;
-	border-bottom: 1px dashed #eeeeee;
+	border-bottom: 1px dashed #09b367;
 }
 
 .nav-primary {
@@ -1800,15 +1800,23 @@ main article.post, aside section.widget {
 	background-color: #dddddd;
 }
 
-.header-image .site-title > a {
-    display: block;
-    margin: 0px auto;
-    height: 2.5em;
-    background-position: center center !important;
-    background-size: contain !important;
-    max-width: none;
-    width: auto;
+.title-area a {
+	display: block;
+	margin: 0px auto;
+	background-position: center center;
+	background-size: contain;
+	height: 2.5em;
+	text-indent: -9999px;
+	background-image: url("http://invibed.com/wp-content/uploads/2015/02/logo2.png");
+	background-repeat: no-repeat;
  }
+
+h2.site-description {
+	text-indent: -9999px;
+	height: 0;
+	line-height: 0;
+	font-size: 0px;
+}
 
  ::-moz-selection {
 	background-color: #09b367;
@@ -1820,8 +1828,10 @@ main article.post, aside section.widget {
 	color: #fff;
 }
 
-.simple-social-icons {
+aside section.widget.simple-social-icons {
 	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 .simple-social-icons h4 {
@@ -1842,13 +1852,154 @@ main article.post, aside section.widget {
 	left: 0;
 }
 
-/*
-.site-title a {
-	background: url("http://www.invibed.com/wp-content/uploads/2015/01/logo.png") no-repeat !important;
+.entry-tags {
+    display: block;
+    float: none;
+}	
+
+h1 {
+	margin: 20px 0;
 }
-*/
 
+.entry-header p.entry-meta {
+    margin-top: 0;
+}
 
+.breadcrumb {
+	margin-bottom: 0; 
+}
+
+.entry-footer {
+	margin-bottom: 0;
+}
+
+.archive-pagination li a:hover, .archive-pagination .active a {
+    background-color: #09B367;
+}
+
+.sidebar {
+    font-size: 16px;
+}
+
+#popup-box-sxzw-1 .popupally-inner-sxzw-1 .desc-sxzw, #popup-embedded-box-sxzw-1 .popupally-inner-sxzw-1 .desc-sxzw {
+	font-size: 40px;
+	font-weight: normal;
+	font-family: "Alice", serif;
+}
+
+#popup-box-sxzw-1 .popupally-inner-sxzw-1 .logo-text-sxzw, #popup-embedded-box-sxzw-1 .popupally-inner-sxzw-1 .logo-text-sxzw {
+	font-family: Lato,sans-serif;
+}
+
+#popup-box-sxzw-1 .popupally-inner-sxzw-1 .popupally-center-sxzw .content-sxzw input[type="submit"].submit-sxzw, #popup-embedded-box-sxzw-1 .popupally-inner-sxzw-1 .popupally-center-sxzw .content-sxzw input[type="submit"].submit-sxzw {
+	background-color: #09B367;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button, .entry-content .button {
+	background-color: #09B367;
+}
+
+.pagination ul {
+	text-align: center;
+}
+
+input, select, textarea {
+     font-size: 14px;
+     padding: 14px;
+	line-height: 14px;
+}
+
+.comment-respond, .entry-comments, .entry-pings {
+margin-bottom: 20px;
+width: 98%;
+margin: 0 1%;
+}
+
+.simple-social-icons ul li a, .simple-social-icons ul li a:hover {
+font-size: 20px;
+padding: 8px;
+}
+
+.simple-social-icons ul li a:hover {
+background-color: #09B367;
+}
+
+h1.site-title {
+	margin: 0;
+}
+
+div.form small {
+	font-size: 100%;
+	font-weight: 400;
+	font-family: Lato, sans-serif;
+}
+
+.sidebar .widget.widget_mc4wp_widget {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: #09B367;*/
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 1%;
+    font-weight: 400;
+    border: none;
+}
+
+.sidebar .widget.widget_mc4wp_widget p {
+	margin: 0;
+}
+
+.widget_mc4wp_widget h4 {
+	display: none;
+}
+
+.widget_mc4wp_widget .mc4wp-form label {
+	float: left;
+	width: 65%;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+.widget_mc4wp_widget .mc4wp-form .right {
+	float: right;
+	width: 35%;
+}
+
+.mc4wp-form {
+    margin: 0;
+}
+
+.mc4wp-form button, .mc4wp-form input[type="button"], .mc4wp-form input[type="submit"] {
+	padding: 14px 24px;
+}
+
+#mc4wp-form-1 {
+	margin: 0;
+}
+
+.site-footer {
+	margin-bottom: 110px;
+	background-color: #ddd;
+	border: none;
+}
+
+iframe {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.sidebar .widget {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.widget-title {
+	margin-bottom: 20px;
+}
 
 /*
 Media Queries
