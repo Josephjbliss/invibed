@@ -1792,12 +1792,20 @@ padding: 2em 0;
 main article.post, aside section.widget {
 	margin: 0 1%;
 	width: 98%;
-	border-bottom: 1px dashed #09b367;
+	border-bottom: 1px dashed #ddd;
 }
 
 .nav-primary {
 	border: none;
-	background-color: #dddddd;
+	background-color: #09b367;
+}
+
+.genesis-nav-menu a {
+    color: #fff;
+}
+
+.genesis-nav-menu a:hover {
+    color: #222;
 }
 
 .title-area a {
@@ -1867,6 +1875,7 @@ h1 {
 
 .breadcrumb {
 	margin-bottom: 0; 
+	background-color: #ddd;
 }
 
 .entry-footer {
@@ -1982,7 +1991,6 @@ div.form small {
 }
 
 .site-footer {
-	margin-bottom: 110px;
 	background-color: #ddd;
 	border: none;
 }
@@ -1999,6 +2007,17 @@ iframe {
 
 .widget-title {
 	margin-bottom: 20px;
+	background-color: #ddd;
+	color: #222;
+}
+
+.breadcrumb, .breadcrumb a {
+	color: #222;
+	font-weight: 700;
+}
+
+a {
+    color: #FF4E0D;
 }
 
 /*
