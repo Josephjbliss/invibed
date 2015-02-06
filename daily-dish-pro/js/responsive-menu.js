@@ -27,11 +27,20 @@ jQuery(function( $ ){
 	var stickyNav = function(){  
 	var scrollTop = $(window).scrollTop();  
    
-	if (scrollTop > stickyNavTop) {   
+	if (scrollTop > stickyNavTop && $(window).width() > 768) {   
 		$('.nav-primary').addClass('sticky');
+		// $(".simple-social-icons ul.aligncenter").css({"position": "fixed", "top": "0"});
+		$(".genesis-nav-menu li").css("float", "left");
 	} 
 	else {  
-		$('.nav-primary').removeClass('sticky');   
+		$('.nav-primary').removeClass('sticky');
+		// if($(window).width() < 480) {
+		// 	$(".simple-social-icons ul.aligncenter").css({"position": "absolute", "top": "155px"});			
+		// }
+		// else {
+		// 	$(".simple-social-icons ul.aligncenter").css({"position": "absolute", "top": "192px"});
+		// }
+		$(".genesis-nav-menu li").css("float", "none");
 	}  
 	};
 
