@@ -2367,6 +2367,9 @@ Media Queries
 		margin-left: 0;
 		margin-right: 0;
 	}
+	.mc4wp-alert, .mc4wp-success, .mc4wp-error {
+	    width: 100%;
+	}	
 }
 
 @media only screen and (max-width: 480px) {
