@@ -1,14 +1,11 @@
         <footer class="site-footer wrap clearfix">
             <section class="footer-sec-lg">
-
                 <h5><span>Stay in the Know</span></h5>
-                <div class="email-signup">
-                    <h6>Sign up to receive occassional news.</h6>
-                    <form class="clearfix" action="#">
-                        <input type="text" class="email-input" placeholder="email">
-                        <a class="email-submit button">Count Me In</a>
-                    </form>
-                </div>
+                <?php 
+                if( function_exists( 'mc4wp_form' ) ) {
+				    mc4wp_form();
+				}
+				?>
             </section>
             <section class="footer-sec-sm">
                 <h5><span>Take us on the Go</h5>
@@ -24,8 +21,8 @@
                 </div>
             </section>
         </footer>
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/project.js"></script>
+        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/project.js"></script>
 		<?php wp_footer(); ?>
 </body>
 </html>

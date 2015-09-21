@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="copyright" content="2015 Joe Bliss">
         <meta name="author" content="Danielle Pascarella">
         <meta name="keywords" content="">
@@ -31,27 +31,27 @@
 	    <![endif]-->
 
         <header class="site-header clearfix wrap">
-            <h1 class="logo"><a href="index.html">invibed</a></h1>
+            <h1 class="logo"><a href="<?php echo get_site_url(); ?>">invibed</a></h1>
 
             <nav>
                 <ul class="topnav">
                 <li class="nav-links"><a href="#">Explore</a>
                     <ul class="subnav clearfix">
-                        <li class="categories"><a href="#"><h4><span class="fa fa-newspaper-o"></span>News</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-trophy"></span>Motivation</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-briefcase"></span>Career</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-smile-o"></span>Fun</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-diamond"></span>Style</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-heartbeat"></span>Health</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-usd"></span>Finance 101</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4></a></li>
-                        <li class="categories"><a href="#"><h4><span class="fa fa-video-camera"></span>Videos</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/news/"><h4><span class="fa fa-newspaper-o"></span>News</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/motivation/"><h4><span class="fa fa-trophy"></span>Motivation</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/career/"><h4><span class="fa fa-briefcase"></span>Career</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/fun/"><h4><span class="fa fa-smile-o"></span>Fun</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/style/"><h4><span class="fa fa-diamond"></span>Style</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/health/"><h4><span class="fa fa-heartbeat"></span>Health</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/finance-101/"><h4><span class="fa fa-usd"></span>Finance 101</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/outvibed/"><h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4></a></li>
+                        <li class="categories"><a href="<?php echo get_site_url(); ?>/category/videos/"><h4><span class="fa fa-video-camera"></span>Videos</h4></a></li>
                     </ul>
                 </li>
                 <div class="nav-abs">
-                    <li class="nav-links"><a href="explore.html">Learn</a></li>
-                    <li class="nav-links"><a href="explore.html">Ask</a></li>
-                    <li class="nav-links"><a href="explore.html">Shop</a></li>
+                    <li class="nav-links"><a href="<?php echo get_site_url(); ?>/learn">Learn</a></li>
+                    <li class="nav-links"><a href="<?php echo get_site_url(); ?>/ask">Ask</a></li>
+                    <li class="nav-links"><a href="<?php echo get_site_url(); ?>/shop">Shop</a></li>
                 </div>
             </ul>
             </nav>
@@ -60,7 +60,7 @@
                     <div class="not-logged-in fa fa-user">
                         <p>Sign in</p>
                     </div>
-                    <!-- <img src="img/avatar.jpeg" alt="You" title="You"> -->
+                    <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/avatar.jpeg" alt="You" title="You"> -->
                 </div>
                 <div class="search">
 					<?php get_search_form(); ?>                	
