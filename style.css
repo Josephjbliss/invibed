@@ -762,12 +762,29 @@ input#s:focus {
     overflow: hidden;
 }
 
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+#featured #hero img {
+    display: none;
+}
+
+#featured #hero img.current {
+    display: block;
+}
+
 #latest{
     background-color: #fff;
     width:25%;
     height:100%;
     float:right;
     position: relative;
+}
+
+#latest a {
+    cursor: pointer;
 }
 
 /* ------------------------------------------------ cards */
