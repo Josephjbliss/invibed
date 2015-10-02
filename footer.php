@@ -9,7 +9,8 @@
             </section>
             <section class="footer-sec-sm">
                 <h5><span>Take us on the Go</h5>
-                <a class="button" id="get-app" href="#">Get The App</a>
+                <a class="button" id="iphone-app" href="https://itunes.apple.com/us/app/invibed-business-news-personal/id977513471?mt=8">iPhone</a>
+                <a class="button" id="android-app" href="https://play.google.com/store/apps/details?id=me.dwnld.qnq868">Android</a>
             </section>
             <section class="footer-sec-sm">
                 <h5><span>Connect With Us</h5>

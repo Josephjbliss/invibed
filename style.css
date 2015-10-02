@@ -460,6 +460,7 @@ input#s:focus {
     border-right: 1px solid #e3e3e3;
     float:left;
     width:25%;
+    text-align: center;
 }
 
 .social-links{
@@ -521,6 +522,10 @@ input#s:focus {
 
 .slide{
     display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center center;
 }
 
 .featured-article{
@@ -740,10 +745,10 @@ input#s:focus {
     position: relative;
 }
 
-#get-app{
-    width:10em;
-    display:block;
-    margin:2em auto;
+#iphone-app, #android-app {
+    width: 7em;
+    margin: 1em .25em;
+    display: inline-block;
 }
 
 /* ------------------------------------------------------------- index ids */
@@ -798,9 +803,63 @@ input#s:focus {
 #cards-main{ 
     border-top: 1px solid #e3e3e3;
     border-left: 1px solid #e3e3e3;
+    overflow: hidden;
+}
+
+button.alm-load-more-btn.invibed-button{   
+    background-color: #06d49e ;
+    font-family: "Raleway";
+    font-weight: 100;
+}
+
+button.alm-load-more-btn.invibed-button:hover{
+    background-color: #fff;
+    color: #06d49e;
+    font-weight: 100;
 }
 
 /* ------------------------------------------------------------- page ids */
+
+
+/* ------------------------------------------------------------- font awesome custom classes */
+.fa.news:before {
+  content: "\f1ea";
+}
+.fa.motivation:before {
+  content: "\f091";
+}
+.fa.career:before {
+  content: "\f0b1";
+}
+.fa.fun:before {
+  content: "\f118";
+}
+.fa.style:before {
+  content: "\f219";
+}
+.fa.health:before {
+  content: "\f21e";
+}
+.fa.finance-101:before {
+  content: "\f155";
+}
+.fa.outvibed:before {
+  content: "\f071";
+}
+.fa.videos:before {
+  content: "\f03d";
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto;
+    display: none;
+}
+
 
 /* ------------------------------------------------ same category cards */
 
@@ -933,13 +992,11 @@ input#s:focus {
 
     #hero{
         position: relative;
-        max-height: 400px;
     }
 
     #featured{
         position: relative;
         overflow: hidden;
-        height: auto;
         border: none;
     }
 
@@ -1141,6 +1198,10 @@ input#s:focus {
         margin:1em auto;
     }
 
+    .site-footer {
+        left: 2.5%;
+    }
+
     .wrap{
         width:95%;
     }
@@ -1185,6 +1246,7 @@ input#s:focus {
         display: block;
         margin:0 auto 1%;
     }
+
 }
 
 @media screen and (max-width:420px){
@@ -1212,10 +1274,14 @@ input#s:focus {
         width:341px;
         left:-3.5%;
     }
+    #iphone-app, #android-app {
+        margin: 0 auto .5em;
+        display: block;
+    }
+
 }
 
 @media screen and (max-width:376px){
-
     nav{
         margin:0;
     }

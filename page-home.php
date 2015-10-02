@@ -12,8 +12,13 @@ Template Name: Home Page
 				$posts = get_field('showcase');
 
 				if($posts): ?>
-				    <?php foreach( $posts as $post): ?>
-					<?php the_post_thumbnail(); ?>
+				    <?php foreach( $posts as $post): ?>				    
+
+					<?php $post_thumbnail_id = get_post_thumbnail_id();
+					$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );?>
+
+					<div class="slide" style="background-image: url(<?php echo $post_thumbnail_url;?>)"></div>
+
 				    <?php endforeach; ?>
 				    <?php wp_reset_postdata(); ?>
 				<?php endif; ?>
@@ -28,9 +33,18 @@ Template Name: Home Page
 
 					if($posts): ?>
 					    <?php foreach( $posts as $post): ?>
+
+					    <?php 
+				 		$thecategory = get_the_category();
+						$category = $thecategory[0]->slug;
+						if ($category == "explore"){
+							$category = $thecategory[1]->slug;
+				        }
+					    ?>
+
 						<a href="<?php the_permalink(); ?>">
 	                    <article class="featured-article clearfix">
-	                        <h4><span class="fa fa-usd"></span>Category Name</h4>
+	                        <h4><span class="fa <?php echo $category; ?>"></span><?php echo $category; ?></h4>
 	                        <h2 class="featured-title"><?php if (strlen($post->post_title) > 50) {
                         echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...'; } else {
                         the_title();
@@ -48,33 +62,9 @@ Template Name: Home Page
         <div class="tagline">Know More. Spend Less. Live Better.</div>
 
         <section class="clearfix wrap" id="cards-main">
-		<?php
-		$args = array( 'posts_per_page' => 12, 'category' => 'explore' );
-		$myposts = get_posts( $args );
-		foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
+        <?php echo do_shortcode( '[ajax_load_more post_type="post" category="explore" posts_per_page="12" max_pages="0" button_label="more invibed comin\' at ya" images_loaded="true"] ' ); ?> 
 
-        <?php 
-        $post_thumbnail_id = get_post_thumbnail_id();
-        $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-        ?>
-
-
-		            <a href="<?php the_permalink(); ?>">
-		                <article class="cards">
-		                    <div class="cards-img" style="background-image: url(<?php echo $post_thumbnail_url;?>)"></div>
-		                    <header class="cards-header">
-		                        <h4><span class="fa fa-diamond"></span><?php ?></h4>
-		                        <h3><?php if (strlen($post->post_title) > 50) {
-		                        echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...'; } else {
-		                        the_title();
-		                        } ?></h3>
-		                    </header>
-		                </article>
-		            </a>
-
-
-		<?php endforeach; 
-		wp_reset_postdata();?>
         </section>
+
 <?php get_footer(); ?>
