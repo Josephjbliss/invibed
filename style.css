@@ -90,7 +90,7 @@ h1 {
 
 }
 
-h1 a {
+h1.logo a {
     background-image: url("img/invibed_logo.png");
     background-repeat: no-repeat;
     background-size: 128px;
@@ -374,7 +374,7 @@ input#s:focus {
 /*    z-index: 0;*/
 }
 
-.search{
+.search-container {
     margin: 0 5% 0 0;
     float: right;
 }
@@ -694,6 +694,7 @@ input#s:focus {
     width:100%;
     height:130px;
     overflow:hidden;
+    background-size: cover;
 }
 
 
@@ -705,6 +706,7 @@ input#s:focus {
     -moz-transition: all .15s ease .15s;
     -o-transition: all .15s ease .15s;
     transition: all .15s ease .15s;
+    width: 100%;
 }
 
 .aside-cards-header h4{
@@ -804,18 +806,31 @@ input#s:focus {
     border-top: 1px solid #e3e3e3;
     border-left: 1px solid #e3e3e3;
     overflow: hidden;
+    margin-bottom: 7em;
 }
 
 button.alm-load-more-btn.invibed-button{   
-    background-color: #06d49e ;
+    background-color: #06d49e;
     font-family: "Raleway";
     font-weight: 100;
+    border-radius: 0;
 }
 
 button.alm-load-more-btn.invibed-button:hover{
     background-color: #fff;
     color: #06d49e;
     font-weight: 100;
+}
+
+button.alm-load-more-btn.done.invibed-button {
+    cursor: default;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    background-color: #06d49e;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    display: none;
 }
 
 /* ------------------------------------------------------------- page ids */
@@ -857,9 +872,7 @@ button.alm-load-more-btn.invibed-button:hover{
     height: auto;
     background-color: rgb(255, 255, 255);
     margin: 0px auto;
-    display: none;
 }
-
 
 /* ------------------------------------------------ same category cards */
 
@@ -870,6 +883,29 @@ button.alm-load-more-btn.invibed-button:hover{
     border-left: 1px solid #e3e3e3;
 }
 
+.login {
+    display: none;
+}
+
+.article-main img {
+    height: auto;
+    width: 50%;
+    padding: 0.5em 0 0.25em 0;
+}
+
+.article-main strong {
+    font-weight: 400;
+}
+
+.article-main img.align-left, .article-main img.alignleft{
+    float: left;
+    padding: 0.5em 1.5em 0.25em 0px;
+}
+
+.article-main img.align-right, .article-main img.alignright {
+    float: right;
+    padding: 0.5em 0 0.25em 1.5em;
+}
 
 /* ------------------------------------------------------------- media queries */
 
@@ -1212,6 +1248,12 @@ button.alm-load-more-btn.invibed-button:hover{
 
     #cards-main{
         width:95%;
+    }
+
+    .article-main img, .article-main img.alignleft, .article-main img.alignright {
+        height: auto;
+        width: 100%;
+        padding: 0.5em 0 0.25em 0px;
     }
 }
 

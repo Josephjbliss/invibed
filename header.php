@@ -62,7 +62,7 @@
                     </div>
                     <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/avatar.jpeg" alt="You" title="You"> -->
                 </div>
-                <div class="search">
+                <div class="search-container">
 					<?php get_search_form(); ?>                	
                 </div>
             </div>

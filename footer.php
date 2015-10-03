@@ -23,6 +23,7 @@
             </section>
         </footer>
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.fitvids.js"></script>
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/project.js"></script>
 		<?php wp_footer(); ?>
 </body>

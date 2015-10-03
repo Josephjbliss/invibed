@@ -1,113 +1,36 @@
             <aside>
-            <h5><span>The Latest</span></h5>
+                <h5><span>The Latest</span></h5>
                 <div class="aside-wrap clearfix">
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-landscape" src="img/style.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-diamond"></span>Style</h4>
-                            <h3>Rich Babies of Instagram Will Make You Feel Really Poor</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/career.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-briefcase"></span>Career</h4>
-                            <h3>How Failure Helped This Millennial Get into Y Combinator And Sell One Million...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-landscape" src="img/style.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-diamond"></span>Style</h4>
-                            <h3>Rich Babies of Instagram Will Make You Feel Really Poor</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/career.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-briefcase"></span>Career</h4>
-                            <h3>How Failure Helped This Millennial Get into Y Combinator And Sell One Million...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-landscape" src="img/style.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-diamond"></span>Style</h4>
-                            <h3>Rich Babies of Instagram Will Make You Feel Really Poor</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/career.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-briefcase"></span>Career</h4>
-                            <h3>How Failure Helped This Millennial Get into Y Combinator And Sell One Million...</h3>
-                        </header>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="aside-cards">
-                        <div class="aside-cards-img"><img class="aside-portrait" src="img/outvibed.jpg" alt="" title=""></div>
-                        <header class="aside-cards-header">
-                            <h4><span class="fa fa-exclamation-triangle"></span>Outvibed</h4>
-                            <h3>Beauty Queen Turned Entrepreneur Spills On Overcoming Adversity...</h3>
-                        </header>
-                    </article>
-                </a>
+                    <?php
+
+                    global $post;
+                    $args = array( 'numberposts' => 20 );
+                    $posts = get_posts( $args );
+                    foreach( $posts as $post ): setup_postdata($post); 
+
+                        $post_thumbnail_id = get_post_thumbnail_id();
+                          $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+                            $thecategory = get_the_category();
+                            $category = $thecategory[0]->slug;
+                            if ($category == "explore"){
+                                $category = $thecategory[1]->slug;
+                            }
+                    ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <article class="aside-cards">
+                            <div class="aside-cards-img" style="background-image: url(<?php echo $post_thumbnail_url;?>)"></div>
+                            <header class="aside-cards-header">
+                                <h4><span class="fa <?php echo $category; ?>"></span><?php echo $category; ?></h4>
+                                <h3><?php if (strlen(get_the_title()) > 80) {
+                            echo substr(the_title($before = '', $after = '', FALSE), 0, 80) . '...'; } else {
+                            the_title();
+                            } ?></h3>
+                            </header>
+                        </article>
+                    </a>
+
+                    <?php
+                    endforeach;
+                    ?>
                 </div>
             </aside>

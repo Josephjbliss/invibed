@@ -17,4 +17,6 @@ $(document).ready(function(){
 	}, function(){		
 		$(this).removeClass("current");
 	});
+
+	$(".article-main").fitVids();
 });
