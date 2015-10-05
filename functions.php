@@ -1,4 +1,5 @@
 <?php
+
 add_action( 'after_setup_theme', 'invibed_setup' );
 function invibed_setup()
 {

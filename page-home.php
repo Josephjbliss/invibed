@@ -35,6 +35,18 @@ Template Name: Home Page
 					    <?php foreach( $posts as $post): ?>
 
 					    <?php 
+	                    if (get_field("short_title")){
+	                        $title = get_field("short_title");
+	                    }
+	                    else {
+	                        if (strlen(get_the_title()) > 45) {
+	                            $title = substr(the_title($before = '', $after = '', FALSE), 0, 45) . '...'; 
+	                        } 
+	                        else {
+	                            $title = get_the_title();
+	                        }
+	                    }
+
 				 		$thecategory = get_the_category();
 						$category = $thecategory[0]->slug;
 						if ($category == "explore"){
@@ -45,10 +57,7 @@ Template Name: Home Page
 						<a href="<?php the_permalink(); ?>">
 	                    <article class="featured-article clearfix">
 	                        <h4><span class="fa <?php echo $category; ?>"></span><?php echo $category; ?></h4>
-	                        <h2 class="featured-title"><?php if (strlen($post->post_title) > 50) {
-                        echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...'; } else {
-                        the_title();
-                        } ?></h2>
+	                        <h2 class="featured-title"><?php echo $title; ?></h2>
 	                    </article>
 	                    </a>
 					    <?php endforeach; ?>

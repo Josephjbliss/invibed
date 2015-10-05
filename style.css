@@ -865,14 +865,14 @@ button.alm-load-more-btn.done.invibed-button {
   content: "\f03d";
 }
 
-.site-footer {
+/*.site-footer {
     position: fixed;
     bottom: 0px;
     left: 5%;
     height: auto;
     background-color: rgb(255, 255, 255);
     margin: 0px auto;
-}
+}*/
 
 /* ------------------------------------------------ same category cards */
 
@@ -1037,10 +1037,15 @@ button.alm-load-more-btn.done.invibed-button {
     }
 
     #latest-wrap{
-        width: 90%;
+/*        width: 90%;
         position: relative;
         top:0;
-        margin:auto;
+        margin:auto;*/
+        width: 100%;
+        bottom: 0px;
+        top: auto;
+        height: auto;
+        position: absolute;
     }
 
     #the-latest{
@@ -1125,9 +1130,9 @@ button.alm-load-more-btn.done.invibed-button {
         width: 100%;
     }
 
-    #latest-wrap{
+/*    #latest-wrap{
         width: 100%;
-    }
+    }*/
 }
 
 @media screen and (max-width: 937px){

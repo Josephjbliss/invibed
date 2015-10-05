@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 	<?php         
 	$yourcat = get_category(get_query_var('cat'));
         $category =  $yourcat->slug;
