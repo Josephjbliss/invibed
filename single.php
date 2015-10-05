@@ -34,9 +34,9 @@
 
                 <section class="article-social clearfix">
                 	<h5><span>Share This Article</span></h5>
-                    <a href="#" target="blank"><span class="fa fa-facebook social-links"></span></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="blank"><span class="fa fa-facebook social-links"></span></a>
                     <a href="http://twitter.com/home/?status=<?php the_title();?> <?php the_permalink(); ?> - via @invibed" target="blank"><span class="fa fa-twitter social-links"></span></a>
-                    <a href="#" target="blank"><span class="fa fa-linkedin-square social-links"></span></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title();?>" target="blank"><span class="fa fa-linkedin-square social-links"></span></a>
                     <a href="mailto:?subject=Check%20out%20this%20article%20on%20invibed.com&body=<?php the_permalink(); ?>" target="blank"><span class="fa fa-envelope-o social-links" target="blank"></span></a>
                 </section>
 
