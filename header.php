@@ -7,7 +7,7 @@
         <meta name="copyright" content="2015 Joe Bliss">
         <meta name="author" content="Danielle Pascarella">
         <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Know More. Spend Less. Live Better.">
 
 		<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 

@@ -404,7 +404,6 @@ input#s:focus {
 }
 
 /* ------------------------------------------------ all pages footer */
-
 .site-footer {
     margin: 4em auto;
     border-top: 1px solid #e3e3e3;
@@ -498,10 +497,15 @@ input#s:focus {
     text-align: center;
 }
 
-.mc4wp-form {
+footer .mc4wp-form {
     position: relative;
     overflow: hidden;
     padding-bottom: 1.5em;
+}
+
+body.page-template-default .mc4wp-form {
+    float: left;
+    padding: 1.5em 0px;
 }
 
 .mc4wp-notice, .mc4wp-alert {
@@ -893,6 +897,11 @@ button.alm-load-more-btn.done.invibed-button {
     padding: 0.5em 0 0.25em 0;
 }
 
+.article-main img.aligncenter {
+    margin: 0 auto;
+    display: block;
+}
+
 .article-main strong {
     font-weight: 400;
 }
@@ -906,6 +915,22 @@ button.alm-load-more-btn.done.invibed-button {
     float: right;
     padding: 0.5em 0 0.25em 1.5em;
 }
+
+.article-main a {
+    text-decoration: underline;
+}
+
+.article-main ul {
+    padding-left: 1em;
+    list-style-type: disc;
+}
+
+.article-main li {
+    line-height: 1.618em;
+    margin:1em 0 0;
+}
+
+
 
 /* ------------------------------------------------------------- media queries */
 
@@ -1072,6 +1097,7 @@ button.alm-load-more-btn.done.invibed-button {
         width:100%;
         float: none;
         margin:0;
+        display: none;
     }
 
     .aside-cards{

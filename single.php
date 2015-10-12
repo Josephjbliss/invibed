@@ -19,6 +19,8 @@
                 </header>
             <article class="article">
                 
+                <?php if(get_post_thumbnail_id()):?>
+
                 <figure id="article-hero">
                     <?php $post_thumbnail_id = get_post_thumbnail_id();
 					$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id ); ?>
@@ -27,6 +29,8 @@
                     <figcaption><?php the_field('photo_caption'); ?></figcaption>
                     <?php endif; ?>
                 </figure>
+                
+                <?php endif; ?>
 
                 <section class="article-main clearfix">
  					<?php the_content();?>

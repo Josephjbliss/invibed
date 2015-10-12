@@ -3,12 +3,12 @@ $(document).ready(function(){
 		$(".mc4wp-form form").submit();
 	});
 
-	// NOT WORKING
-	// $("li.categories").click(function(){
-	// 	$(this).find("a").trigger("click");
-	// });
+	$("li.categories").click(function(){
+		window.location = $(this).find("a").attr("href");
+	});
 	
 	$("#featured #hero .slide").eq(0).addClass("current");
+	$("#latest a").eq(0).addClass("current");
 
 	$("#latest a").hover(function(){
 		$(this).addClass("current");
@@ -19,4 +19,11 @@ $(document).ready(function(){
 	});
 
 	$(".article-main").fitVids();
+});
+
+$(document).ajaxComplete(function() {
+	if($("div.cards-img").length < 4){
+		$("div.cards-img").css("border-top", "1px solid #E3E3E3");
+		$("#cards-main").css("border-top", "none");
+	}
 });
