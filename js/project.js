@@ -27,3 +27,21 @@ $(document).ajaxComplete(function() {
 		$("#cards-main").css("border-top", "none");
 	}
 });
+
+$(window).scroll(function(){
+	if(!$(".footer-wrapper").hasClass("sticky")) { 
+		if ($(window).scrollTop() > 150) { //$("#featured").offset().top
+			// $(".footer-wrapper").addClass("sticky").hide().fadeIn(200);
+		 	$(".footer-wrapper").addClass("sticky");
+		}
+	}
+	else {
+		if($(window).scrollTop() < 150) { //$("#featured").offset().top
+			// $(".footer-wrapper").fadeOut(200, function(){
+			// 	$(this).removeClass("sticky");
+			// });		
+		 	$(".footer-wrapper").removeClass("sticky");
+		}
+	}
+});
+

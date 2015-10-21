@@ -410,20 +410,17 @@ input#s:focus {
     border-left: 1px solid #e3e3e3;
 }
 
-.sticky-footer .site-footer {
-    border-top: 1px solid #e3e3e3;
-    border-left: 1px solid #e3e3e3;
+.footer-wrapper.sticky {
     position: fixed;
-    width: 90%;
+    width: 100%;
     bottom: 0;
-    left: 5%;
-    margin: 0;
-    height: auto;
-    background-color: #fff;
 }
 
-.sticky-footer #cards-main {
-    margin-bottom: 4em;
+.footer-wrapper.sticky .site-footer {
+    border-top: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    background-color: #fff;
+    margin: 0 auto;
 }
 
 .button{
@@ -1233,6 +1230,27 @@ button.alm-load-more-btn.done.invibed-button {
         display: none;
         visibility: hidden;
         height:0;
+    }
+
+    .footer-wrapper.sticky {
+        position: static;
+    }
+
+    .footer-wrapper.sticky .footer-sec-lg {
+        width: 95%;
+        float: none;
+        position: fixed;
+        bottom: 0px;
+        background-color: #FFF;
+        padding: 0.5em .5em 0 .5em;
+    }
+
+    .footer-wrapper.sticky .footer-sec-lg h5 {
+        display: none;
+    }
+
+    .footer-wrapper.sticky footer .mc4wp-form {
+        padding-bottom: 0;
     }
 }
 
