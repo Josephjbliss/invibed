@@ -4,8 +4,11 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="copyright" content="2015 Joe Bliss">
-        <meta name="author" content="Danielle Pascarella">
+        <meta name="copyright" content="2015 invibed">
+        
+        <?php global $post; $author_id=$post->post_author; ?>
+        <meta name="author" content="<?php if(is_single()) { the_author_meta( 'nickname', $author_id ); } else { echo 'Danielle Pascarella'; } ?>">
+
         <meta name="keywords" content="">
         <meta name="description" content="Know More. Spend Less. Live Better.">
 
