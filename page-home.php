@@ -26,7 +26,7 @@ Template Name: Home Page
 
             <div class="wrap clearfix" id="latest-wrap">
                 <div class="clearfix" id="latest">
-                    <h5 id="the-latest"><span>The Latest</span></h5>
+                    <h5 id="the-latest"><span>Hot This Week</span></h5>
 
 					<?php 
 					$posts = get_field('showcase');
