@@ -1,6 +1,13 @@
 $(document).ready(function(){
 	$(".button.email-submit").click(function(){
-		$(".mc4wp-form form").submit();
+		$(".mc4wp-form").submit();
+		// alert("test 1 2");
+	});
+	
+	$(".mc4wp-form").keypress(function(evt){
+		    if (evt.keyCode == 13) {
+				$(".mc4wp-form").submit();
+		    }
 	});
 
 	$("li.categories").click(function(){
